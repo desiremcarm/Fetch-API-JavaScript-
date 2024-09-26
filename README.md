@@ -1,6 +1,6 @@
 # Fetch-API-JavaScript
 
-A simple project to visualize the fetch API usage, using the fake public API [jsonplaceholder.typicode](https://jsonplaceholder.typicode.com/users) and [Pico CSS](https://picocss.com/docs/link).
+A simple project to visualize the fetch API usage, using the fake public API [jsonplaceholder.typicode](https://jsonplaceholder.typicode.com/users) and [Pico CSS](https://picocss.com/docs/link). Visit the [Live Demo here](https://tranquil-entremet-d4f983.netlify.app).
 
 ### What you'll find in this project
 
