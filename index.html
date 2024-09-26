@@ -1,0 +1,139 @@
+<!DOCTYPE >
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Fetch API JavaScript</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" async defer></script>
+  </head>
+  <body class="container">
+    <header>
+      <h1>Fetch API JavaScript</h1>
+      <p>
+        A simple project to visualize the fetch API usage, using the fake public
+        API
+        <a href="https://jsonplaceholder.typicode.com/users"
+          >"https://jsonplaceholder.typicode.com/users"</a
+        >
+        and
+        <a
+          href="
+        https://picocss.com/docs/link"
+          >Pico CSS</a
+        >.
+      </p>
+    </header>
+    <hr />
+    <main>
+      <!-- GET -->
+      <article>
+        <h4>Get request</h4>
+        <pre>
+            <code id="getReq">
+                fetch('https://jsonplaceholder.typicode.com/users/1')
+                .then(answer => answer.json())
+                .then(data => console.log(data))
+            </code>
+        </pre>
+        <div role="group">
+          <button onclick="getCopiedText('getReq')">Copy code</button>
+          <button id="getBtn">Run code</button>
+        </div>
+        <pre class="hidden">
+            <code id="getResponse"></code>
+        </pre>
+      </article>
+      <!-- POST -->
+      <article>
+        <h4>Post request</h4>
+        <pre>
+            <code id="postReq">
+                fetch('https://jsonplaceholder.typicode.com/users', {
+                    method: 'POST',
+                    headers: {
+                      'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        name: "Desire Marron",
+                        email: "desiremcarm@mail.com",
+                    }),
+                  }).then(respuesta => respuesta.json())
+                    .then(datos => console.log(datos))
+            </code>
+        </pre>
+        <div role="group">
+          <button onclick="getCopiedText('postReq')">Copy code</button>
+          <button id="postBtn">Run code</button>
+        </div>
+        <pre class="hidden">
+          <code id="postResponse"></code>
+        </pre>
+      </article>
+      <!-- PUT -->
+      <article>
+        <h4>Put request</h4>
+        <pre>
+            <code id="putReq">
+                fetch('https://jsonplaceholder.typicode.com/users', {
+                    method: 'PUT',
+                    headers: {
+                      'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        name: "Desire M. Carmona",
+                        email: "desire@mail.com",
+                    }),
+                  }).then(respuesta => respuesta.json())
+                    .then(datos => console.log(datos))
+            </code>
+        </pre>
+        <div role="group">
+          <button onclick="getCopiedText('putReq')">Copy code</button>
+          <button id="putBtn">Run code</button>
+        </div>
+        <pre class="hidden">
+          <code id="putResponse"></code>
+        </pre>
+      </article>
+      <!-- DELETE -->
+      <article>
+        <h4>Delete request</h4>
+        <pre>
+            <code id="deleteReq">
+                fetch('https://jsonplaceholder.typicode.com/users/1', {
+                    method: 'DELETE',
+                  }).then(respuesta => respuesta.json())
+                    .then(datos => console.log(datos))
+            </code>
+        </pre>
+        <div role="group">
+          <button onclick="getCopiedText('deleteReq')">Copy code</button>
+          <button id="deleteBtn">Run code</button>
+        </div>
+        <pre class="hidden">
+          <code id="deleteResponse"></code>
+        </pre>
+      </article>
+      <p id="snackbar">Code copied to clipboard</p>
+    </main>
+    <hr />
+    <footer>
+      <span>By Desiré Marrón</span>
+      <a href="https://github.com/desiremcarm">
+        <i style="font-size: 24px" class="fa">&#xf09b;</i>
+      </a>
+      <a href="https://www.linkedin.com/in/desire-m-carmona/">
+        <i style="font-size: 24px" class="fa">&#xf08c;</i>
+      </a>
+    </footer>
+  </body>
+</html>
